@@ -1,0 +1,22 @@
+<templateSet group="clog">
+    <template name="clog"
+              resource-bundle="messages.MyBundle"
+              key="livetemplate.description.clog"
+              value="console.log('%c DEBUG[ $EXPR$ ]-$RandomPrefix$:', '$RandomColor$', $EXPR$)$END$"
+              description="Color Console log"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="RandomPrefix" expression="randomPrefix()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="RandomColor" expression="randomColor()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="END" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="Angular" value="true"/>
+            <option name="HTML" value="true"/>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSP" value="true"/>
+            <option name="TypeScript" value="true"/>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+</templateSet>

@@ -1,0 +1,21 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>org.jetbrains.plugins.template</id>
+    <name>Console Log Colors</name>
+    <vendor>JetBrains</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/template/clog.xml"/>
+        <liveTemplateContext implementation="com.tony.plugins.live.CustomLiveTemplateContext"
+                             contextId="clog"/>
+        <liveTemplateMacro implementation="com.tony.plugins.macro.RandomPrefixMacro"/>
+        <liveTemplateMacro implementation="com.tony.plugins.macro.RandomColorMacro"/>
+
+        <codeInsight.template.postfixTemplateProvider language="JavaScript"
+                                                      implementationClass="com.tony.plugins.postfix.ClogPostfixTemplateProvider"/>
+    </extensions>
+</idea-plugin>
