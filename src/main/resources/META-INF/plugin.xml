@@ -1,8 +1,8 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
+    <id>com.tony.plugins.clog</id>
     <name>Console Log Colors</name>
-    <vendor>JetBrains</vendor>
+    <vendor>Tony Liu</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
